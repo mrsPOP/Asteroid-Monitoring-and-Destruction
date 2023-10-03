@@ -13,5 +13,5 @@ export interface FilterStoreType {
 export interface CartStoreType {
   cart: Set<string>,
   setNewCartItem: (value: string) => void,
-  RemoveFromCart: (value: string) => void,
+  removeFromCart: (value: string) => void,
 }
