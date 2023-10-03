@@ -1,10 +1,10 @@
-import styles from './page.module.css';
-import AsteroidsList from '@/components/AsteroidsList';
+import styles from "./page.module.css";
+import AsteroidsList from "@/components/AsteroidsList/AsteroidsList";
 
 export default async function Home() {
   return (
     <main className={styles.main}>
-      <AsteroidsList/>
+      <AsteroidsList />
     </main>
-  )
+  );
 }

@@ -1,8 +1,16 @@
 .main {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: #000;
+  background-image: url('../../public/planeta.svg');
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 31px;
+  background-attachment: fixed;
+  background-size: 436px;
+  flex: 1;
 }
