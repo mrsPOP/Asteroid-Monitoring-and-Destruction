@@ -8,9 +8,11 @@ import stone from "../../../public/stone.svg";
 const AsteroidItem = ({data} : {data: AsteroidInfo}) => {
   const inKilometers = useFilterStore((state) => state.inKilometers);
   const cart = useCartStore((state) => state.cart);
+  const setNewCartItem = useCartStore((state) => state.setNewCartItem);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
 
   function switchCartStateForAsteroid () {
-    cart.has(data.id) ? cart.delete(data.id) : cart.add(data.id);
+    cart.has(data.id) ? removeFromCart(data.id) : setNewCartItem(data.id);
   }
 
   return (
