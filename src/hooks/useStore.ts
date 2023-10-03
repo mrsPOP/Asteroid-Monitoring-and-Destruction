@@ -1,11 +1,14 @@
 import { create } from "zustand";
 import { produce } from "immer";
+import { enableMapSet } from 'immer';
 import { getAsteroidsList } from "@/utils/helperFunctions";
 import {
   AsteroidsListStoreType,
   FilterStoreType,
   CartStoreType,
 } from "@/utils/storeTypes";
+
+enableMapSet();
 
 export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
   asteroidsList: undefined,
@@ -36,7 +39,7 @@ export const useCartStore = create<CartStoreType>((set) => ({
         state.cart.add(value);
       })
     ),
-  RemoveFromCart: (value: string) =>
+  removeFromCart: (value: string) =>
     set(
       produce((state) => {
         state.cart.delete(value);
