@@ -50,3 +50,13 @@ export interface NearEarthObject {
   }[];
   is_sentry_object: boolean;
 }
+
+export interface AsteroidInfo {
+  id: string,
+  date: string,
+  maxDiameterInMeters: number,
+  isHazardous: boolean,
+  distanceInKilometers: number,
+  lunarDistance: number,
+  cartButton: boolean,
+}
