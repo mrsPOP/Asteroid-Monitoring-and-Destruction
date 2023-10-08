@@ -13,6 +13,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-infinite-scroll-component": "^6.1.0",
     "zustand": "^4.4.1"
   },
   "devDependencies": {

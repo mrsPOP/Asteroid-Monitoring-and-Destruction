@@ -1,8 +1,10 @@
 import { AsteroidInfo } from "./types";
 
 export interface AsteroidsListStoreType {
-  asteroidsList: [] | undefined | AsteroidInfo[],
+  renderedAsteroids: [] | undefined | AsteroidInfo[],
+  notRenderedAsteroids: [] | undefined | AsteroidInfo[],
   setAsteroidsList: () => void,
+  getMoreAsteroids: () => void,
 }
 
 export interface FilterStoreType {
