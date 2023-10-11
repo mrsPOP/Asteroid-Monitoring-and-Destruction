@@ -1,9 +1,9 @@
-export interface DateRange {
+interface DateRange {
   startDate: string;
   endDate: string;
 }
 
-export interface NearEarthObject {
+interface NearEarthObject {
   links: {
     self: string;
   };
@@ -51,7 +51,7 @@ export interface NearEarthObject {
   is_sentry_object: boolean;
 }
 
-export interface AsteroidInfo {
+interface AsteroidInfo {
   id: string,
   date: string,
   maxDiameterInMeters: number,

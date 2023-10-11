@@ -1,6 +1,3 @@
-import { NASA_API_URL, API_KEY } from "./constants";
-import { DateRange } from "./types";
-
 export async function getAsteroidsInfo(dateRange: DateRange) {
   const res = await fetch(
     `${NASA_API_URL}/feed?start_date=${dateRange.startDate}&end_date=${dateRange.endDate}&api_key=${API_KEY}`

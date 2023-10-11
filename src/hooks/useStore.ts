@@ -1,11 +1,6 @@
 import { create } from "zustand";
 import { produce, enableMapSet } from "immer";
 import { getAsteroidsList } from "@/utils/helperFunctions";
-import {
-  AsteroidsListStoreType,
-  FilterStoreType,
-  CartStoreType,
-} from "@/utils/storeTypes";
 
 enableMapSet();
 

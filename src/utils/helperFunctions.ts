@@ -1,6 +1,4 @@
 import { getAsteroidsInfo } from "@/utils/api";
-import { NearEarthObject } from "./types";
-import { AsteroidInfo } from "./types";
 
 export function formatDate(date: Date): string {
   const year = date.getFullYear();
@@ -22,21 +20,36 @@ export async function getAsteroidsList() {
     endDate: sevenDaysAgo,
   });
 
-  const asteroidsDataForSelectedDates = asteroidsInfo['near_earth_objects'];
-  const asteroidsList: AsteroidInfo[] = []; 
+  const asteroidsDataForSelectedDates = asteroidsInfo["near_earth_objects"];
+  const asteroidsList: AsteroidInfo[] = [];
 
   for (const date in asteroidsDataForSelectedDates) {
-    asteroidsDataForSelectedDates[date].forEach((asteroidInfo: NearEarthObject)  => {
-      asteroidsList.push({
-        id: asteroidInfo['id'],
-        date: date,
-        maxDiameterInMeters: asteroidInfo['estimated_diameter']['meters']["estimated_diameter_max"],
-        isHazardous: asteroidInfo['is_potentially_hazardous_asteroid'],
-        distanceInKilometers: Math.round(Number(asteroidInfo['close_approach_data'][0]['miss_distance']['kilometers'])),
-        lunarDistance: Math.round(Number(asteroidInfo['close_approach_data'][0]['miss_distance']['lunar'])),
-        cartButton: false,
-      })
-    });
+    asteroidsDataForSelectedDates[date].forEach(
+      (asteroidInfo: NearEarthObject) => {
+        asteroidsList.push({
+          id: asteroidInfo["id"],
+          date: date,
+          maxDiameterInMeters:
+            asteroidInfo["estimated_diameter"]["meters"][
+              "estimated_diameter_max"
+            ],
+          isHazardous: asteroidInfo["is_potentially_hazardous_asteroid"],
+          distanceInKilometers: Math.round(
+            Number(
+              asteroidInfo["close_approach_data"][0]["miss_distance"][
+                "kilometers"
+              ]
+            )
+          ),
+          lunarDistance: Math.round(
+            Number(
+              asteroidInfo["close_approach_data"][0]["miss_distance"]["lunar"]
+            )
+          ),
+          cartButton: false,
+        });
+      }
+    );
   }
 
   return asteroidsList;
