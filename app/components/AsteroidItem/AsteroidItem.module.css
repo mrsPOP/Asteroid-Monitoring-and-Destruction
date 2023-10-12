@@ -65,8 +65,8 @@
 }
 
 .button:hover {
-  background-color: #ff3b0f;
-  color: #000;
+  background-color: var(--white-base);
+  color: var(--orange-base);
 }
 
 .danger-sign {
