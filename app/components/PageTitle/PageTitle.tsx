@@ -3,9 +3,9 @@ import styles from "./PageTitle.module.css"
 
 const PageTitle = () => {
   return (
-    <p className={styles["title"]}>
+    <h1 className={styles["title"]}>
       Ближайшие подлёты астероидов
-    </p>
+    </h1>
   );
 };
 
