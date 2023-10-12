@@ -7,7 +7,7 @@
   padding: 6rem;
   min-height: 100vh;
   background-color: #000;
-  background-image: url('../../public/planeta.svg');
+  background-image: url('../public/planeta.svg');
   background-repeat: no-repeat;
   background-position: left 0 bottom 31px;
   background-attachment: fixed;
