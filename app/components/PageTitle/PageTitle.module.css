@@ -1,0 +1,10 @@
+.title {
+  max-width: 300px;
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--white-base);
+}
