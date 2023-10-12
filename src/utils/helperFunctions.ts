@@ -1,4 +1,5 @@
 import { getAsteroidsInfo } from "@/utils/api";
+import { MONTHS } from "./constants";
 
 export function formatDate(date: Date): string {
   const year = date.getFullYear();
@@ -6,6 +7,11 @@ export function formatDate(date: Date): string {
   const day = date.getDate().toString().padStart(2, "0");
 
   return `${year}-${month}-${day}`;
+}
+
+export function formatDateMonthRu(date: string): string {
+  const [year, month, day] = date.split('-');
+  return `${year} ${MONTHS[month]} ${day}`;
 }
 
 export async function getAsteroidsList() {
@@ -28,7 +34,7 @@ export async function getAsteroidsList() {
       (asteroidInfo: NearEarthObject) => {
         asteroidsList.push({
           id: asteroidInfo["id"],
-          date: date,
+          date: formatDateMonthRu(date),
           maxDiameterInMeters:
             asteroidInfo["estimated_diameter"]["meters"][
               "estimated_diameter_max"
