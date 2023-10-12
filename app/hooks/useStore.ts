@@ -38,9 +38,13 @@ export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
   },
 }));
 
-export const useFilterStore = create<FilterStoreType>((set) => ({
+export const useDistanceUnitStore = create<DistanceUnitStoreType>((set) => ({
   inKilometers: true,
-  setInKilometers: (value: boolean) => set({ inKilometers: value }),
+  switchInKilometers: () => set(
+    produce((state) => {
+      state.inKilometers = !state.inKilometers;
+    })
+  ),
 }));
 
 export const useCartStore = create<CartStoreType>((set) => ({

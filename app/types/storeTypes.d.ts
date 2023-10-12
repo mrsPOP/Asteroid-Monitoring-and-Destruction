@@ -5,9 +5,9 @@ interface AsteroidsListStoreType {
   getMoreAsteroids: () => void,
 }
 
-interface FilterStoreType {
+interface DistanceUnitStoreType {
   inKilometers: boolean,
-  setInKilometers: (value: boolean) => void,
+  switchInKilometers: () => void,
 }
 
 interface CartStoreType {
