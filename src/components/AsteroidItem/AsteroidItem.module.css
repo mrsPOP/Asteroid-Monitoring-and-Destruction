@@ -1,0 +1,74 @@
+.list-item {
+  font-family: Helvetica;
+  color: var(--white-base);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.first-container {
+  display: flex;
+  gap: 8px;
+}
+
+.distance {
+  margin: 0;
+  height: 32px;
+  background-image: url('../../../public/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0;
+  background-size: contain;
+}
+
+.big-stone {
+  height: 40px;
+  width: 37px;
+}
+
+.small-stone {
+  height: 40px;
+  width: 22px;
+}
+
+.diameter {
+  margin: 0;
+  align-self: center;
+}
+
+.second-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  border: 0;
+  padding: 3px 11px;
+  box-sizing: border-box;
+  background-color: var(--orange-base);
+  color: var(--white-base);
+  border-radius: 16px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #ff3b0f;
+  color: #000;
+}
+
+.danger-sign {
+  margin: 0;
+}

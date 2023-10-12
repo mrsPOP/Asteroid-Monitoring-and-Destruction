@@ -1,7 +1,6 @@
 import React from "react";
 import { useFilterStore, useCartStore } from "@/hooks/useStore";
 import Image from "next/image";
-import arrow from "../../../public/arrow.svg";
 import stone from "../../../public/stone.svg";
 import styles from "./AsteroidItem.module.css";
 
@@ -21,13 +20,12 @@ const AsteroidItem = ({ data }: { data: AsteroidInfo }) => {
       <div className={styles["first-container"]}>
         <p className={styles["distance"]}>
           {inKilometers
-            ? `${data.distanceInKilometers} км`
+            ? `${data.distanceInKilometers.toLocaleString('ru-RU')} км`
             : `${data.lunarDistance} лунные орбиты`}
         </p>
-        <Image className={styles["arrow"]} src={arrow} alt="Arrow" />
-        <Image className={styles["stone"]} src={stone} alt="Stone picture" />
+        <Image className={styles[data.maxDiameterInMeters > 100 ? "big-stone" : "small-stone"]} src={stone} alt="Stone picture" />
         <p className={styles["diameter"]}>
-          &Oslash;{` ${data.maxDiameterInMeters} м`}
+          &Oslash;{` ${data.maxDiameterInMeters.toFixed()} м`}
         </p>
       </div>
       <div className={styles["second-container"]}>
