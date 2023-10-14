@@ -2,15 +2,34 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  padding-left: 40vw;
+  max-width: 1280px;
+  width: 100%;
   min-height: 100vh;
-  background-color: #000;
   background-image: url('../public/planeta.svg');
   background-repeat: no-repeat;
-  background-position: left 0 bottom 31px;
+  background-position: left 0 bottom 29px;
   background-attachment: fixed;
-  background-size: 436px;
+  background-size: 400px;
   flex: 1;
+}
+
+@media screen and (max-width: 1150px) {
+  .main {
+    padding-left: 35vw;
+    background-position: left -150px bottom 29px;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  .main {
+    background-position: left -250px bottom 29px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    padding-left: 25vw;
+    background-position: left -350px bottom 29px;
+  }
 }
