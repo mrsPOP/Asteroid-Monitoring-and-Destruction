@@ -1,18 +1,12 @@
 :root {
   --white-base: #FFF;
   --orange-base: #F86600;
+  --black-base: #000;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.root {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: var(--black-base);
   max-width: 1280px;
-  width: 100%;
 }
