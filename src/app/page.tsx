@@ -1,9 +1,9 @@
 import styles from "./page.module.css";
 import AsteroidsList from "@/components/AsteroidsList/AsteroidsList";
 import DistanceUnit from "@/components/DistanceUnit/DistanceUnit";
-import PageTitle from "./components/PageTitle/PageTitle";
-import Cart from "./components/Cart/Cart";
-import RenderedAsteroids from "./components/RenderedAsteroids/RenderedAsteroids";
+import PageTitle from "@/components/PageTitle/PageTitle";
+import Cart from "@/components/Cart/Cart";
+import RenderedAsteroids from "@/components/RenderedAsteroids/RenderedAsteroids";
 import { getAsteroidsList } from "@/utils/helperFunctions";
 
 export default async function Home() {
