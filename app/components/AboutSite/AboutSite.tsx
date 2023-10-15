@@ -9,7 +9,7 @@ const AboutSite = () => {
   return (
     <div className={styles["container"]}>
       <p className={classNames(styles["logo"], passionOne.className)}>ARMAGEDDON 2023</p>
-      <p className={styles["about"]}>ООО “Команда им. Б. Уиллиса”. Взрываем астероиды с 1998 года.</p>
+      <p className={styles["about"]}>ООО “Команда им. Б. Уиллиса”.<br/>Взрываем астероиды с 1998 года.</p>
     </div>
   );
 };
