@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-left: 40vw;
   max-width: 1280px;
+  min-height: calc(100vh - 128px);
   background-image: url('../public/planeta.svg');
   background-repeat: no-repeat;
   background-position: left 0 bottom 29px;
