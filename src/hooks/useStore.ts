@@ -10,8 +10,8 @@ export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
     try {
       set(
         produce((state) => {
-          state.renderedAsteroids = data.slice(0, 1);
-          state.notRenderedAsteroids = data.slice(1);
+          state.renderedAsteroids = data.slice(-1);
+          state.notRenderedAsteroids = data.slice(0, -1);
         })
       );
     } catch (e) {
@@ -28,7 +28,7 @@ export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
               ? state.notRenderedAsteroids.length
               : 8;
           state.renderedAsteroids = state.renderedAsteroids.concat(
-            state.notRenderedAsteroids.splice(cutFrom, cutNumber)
+            state.notRenderedAsteroids.splice(cutFrom, cutNumber).reverse()
           );
         }
       })

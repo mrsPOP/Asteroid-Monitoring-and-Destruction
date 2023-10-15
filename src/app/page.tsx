@@ -13,8 +13,8 @@ export default async function Home() {
   let notRenderedAstroids: AsteroidInfo[] = [];
 
   if (data.length > 8) {
-    firstStaticAsteroidsData = data.slice(0, 8);
-    notRenderedAstroids = data.slice(8).reverse();
+    firstStaticAsteroidsData = data.slice(-8);
+    notRenderedAstroids = data.slice(0, -8);
   } else {
     firstStaticAsteroidsData = data;
   }
