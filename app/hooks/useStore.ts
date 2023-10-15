@@ -1,19 +1,17 @@
 import { create } from "zustand";
 import { produce, enableMapSet } from "immer";
-import { getAsteroidsList } from "@/utils/helperFunctions";
 
 enableMapSet();
 
 export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
   renderedAsteroids: undefined,
   notRenderedAsteroids: undefined,
-  setAsteroidsList: async () => {
+  setAsteroidsList: (data) => {
     try {
-      const data = await getAsteroidsList();
       set(
         produce((state) => {
-          state.renderedAsteroids = data.slice(0, 8);
-          state.notRenderedAsteroids = data.slice(8).reverse();
+          state.renderedAsteroids = data.slice(0, 1);
+          state.notRenderedAsteroids = data.slice(1);
         })
       );
     } catch (e) {
