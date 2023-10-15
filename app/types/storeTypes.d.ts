@@ -1,7 +1,7 @@
 interface AsteroidsListStoreType {
   renderedAsteroids: [] | undefined | AsteroidInfo[],
   notRenderedAsteroids: [] | undefined | AsteroidInfo[],
-  setAsteroidsList: () => void,
+  setAsteroidsList: (data: AsteroidInfo[]) => void,
   getMoreAsteroids: () => void,
 }
 
