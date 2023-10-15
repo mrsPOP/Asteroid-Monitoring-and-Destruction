@@ -60,3 +60,7 @@ interface AsteroidInfo {
   lunarDistance: number,
   cartButton: boolean,
 }
+
+interface AsteroidDeclension {
+  [key: number]: string;
+}
