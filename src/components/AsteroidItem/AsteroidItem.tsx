@@ -5,15 +5,16 @@ import Image from "next/image";
 import stone from "../../../public/stone.svg";
 import styles from "./AsteroidItem.module.css";
 import classNames from "classnames";
+import { usePathname  } from "next/navigation";
 
 const AsteroidItem = ({ data }: { data: AsteroidInfo }) => {
   const inKilometers = useDistanceUnitStore((state) => state.inKilometers);
-  const cart = useCartStore((state) => state.cart);
-  const setNewCartItem = useCartStore((state) => state.setNewCartItem);
-  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const {cart, setNewCartItem, removeFromCart} = useCartStore();
+
+  const pathname = usePathname();
 
   function switchCartStateForAsteroid() {
-    cart.has(data.id) ? removeFromCart(data.id) : setNewCartItem(data.id);
+    cart?.has(data.id) ? removeFromCart(data.id) : setNewCartItem(data.id, data);
   }
 
   return (
@@ -38,13 +39,13 @@ const AsteroidItem = ({ data }: { data: AsteroidInfo }) => {
         </p>
       </div>
       <div className={styles["second-container"]}>
-        <button
+        {(pathname === '/') && <button
           className={styles["button"]}
           type="button"
           onClick={switchCartStateForAsteroid}
         >
-          {cart.has(data.id) ? "В корзине" : "Заказать"}
-        </button>
+          {cart?.has(data.id) ? "В корзине" : "Заказать"}
+        </button>}
         {data.isHazardous ? (
           <p className={styles["danger-sign"]}>⚠️ Опасен</p>
         ) : (

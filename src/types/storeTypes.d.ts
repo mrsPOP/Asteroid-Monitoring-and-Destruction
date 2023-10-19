@@ -10,8 +10,12 @@ interface DistanceUnitStoreType {
   switchInKilometers: () => void,
 }
 
+interface CartKeysValuesType {
+  [key: string]: AsteroidInfo;
+}
+
 interface CartStoreType {
-  cart: Set<string>,
-  setNewCartItem: (value: string) => void,
+  cart: Map<CartKeysValuesType>,
+  setNewCartItem: (id: string, asteroidObj: AsteroidInfo) => void,
   removeFromCart: (value: string) => void,
 }

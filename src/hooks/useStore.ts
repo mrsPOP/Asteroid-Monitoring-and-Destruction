@@ -46,17 +46,17 @@ export const useDistanceUnitStore = create<DistanceUnitStoreType>((set) => ({
 }));
 
 export const useCartStore = create<CartStoreType>((set) => ({
-  cart: new Set(),
-  setNewCartItem: (value: string) =>
+  cart: new Map(),
+  setNewCartItem: (id, asteroidObj) =>
     set(
       produce((state) => {
-        state.cart.add(value);
+        state.cart.set(id, asteroidObj);
       })
     ),
-  removeFromCart: (value: string) =>
+  removeFromCart: (id) =>
     set(
       produce((state) => {
-        state.cart.delete(value);
+        state.cart.delete(id);
       })
     ),
 }));
