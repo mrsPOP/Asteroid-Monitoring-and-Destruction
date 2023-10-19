@@ -9,11 +9,15 @@
 }
 
 .logo {
-  margin: 0;
   font-size: 32px;
   font-style: normal;
   line-height: normal;
   color: var(--orange-base);
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: .7;
 }
 
 .about {
