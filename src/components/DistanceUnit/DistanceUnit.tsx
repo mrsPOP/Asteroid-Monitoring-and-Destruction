@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useDistanceUnitStore } from "@/hooks/useStore";
 import styles from "./DistanceUnit.module.css";
 import classNames from "classnames";

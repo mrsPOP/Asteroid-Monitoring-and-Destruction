@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useCartStore } from "@/hooks/useStore";
 import { asteroidDeclensions } from "@/utils/constants";
 import styles from "./Cart.module.css";

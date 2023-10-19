@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./AboutSite.module.css";
 import { Passion_One } from 'next/font/google';
 import classNames from "classnames";

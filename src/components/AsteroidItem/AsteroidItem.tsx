@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useDistanceUnitStore, useCartStore } from "@/hooks/useStore";
 import Image from "next/image";
 import stone from "../../../public/stone.svg";
