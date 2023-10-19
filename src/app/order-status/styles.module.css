@@ -1,0 +1,40 @@
+.container {
+  flex: 1;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 24px;
+  color: var(--white-base);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.text {
+  color: var(--white-base);
+  margin: 0;
+  padding: 16px;
+}
+
+.wrapper {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 92px - 32px - 16px);
+}
