@@ -37,3 +37,8 @@
   background-color: var(--white-base);
   color: var(--orange-base);
 }
+
+.disabled-btn {
+  background: #888686;
+  pointer-events: none;
+}
