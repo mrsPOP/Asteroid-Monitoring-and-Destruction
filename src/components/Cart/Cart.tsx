@@ -1,14 +1,22 @@
 "use client";
 
 import { useCartStore } from "@/hooks/useStore";
+import { useAsteroidsListStore } from "@/hooks/useStore";
 import { asteroidDeclensions } from "@/utils/constants";
 import styles from "./Cart.module.css";
 import { useRouter } from "next/navigation";
 import classNames from "classnames";
 
 const Cart = () => {
-  const { cart } = useCartStore();
+  const {cart, clearCart} = useCartStore();
+  const { removeaAsteroids } = useAsteroidsListStore();
   const router = useRouter();
+
+  function handleSend () {
+    removeaAsteroids(Array.from(cart.keys()));
+    router.push("/order-status");
+    // clearCart();
+  } 
 
   return (
     <div className={styles["cart-container"]}>
@@ -20,7 +28,7 @@ const Cart = () => {
         className={classNames(styles["send-button"], {
           [styles["disabled-btn"]]: cart.size === 0,
         })}
-        onClick={() => router.push("/order-status")}
+        onClick={handleSend}
         type="button"
       >
         Отправить

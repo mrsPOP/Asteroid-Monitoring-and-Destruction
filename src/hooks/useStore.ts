@@ -34,15 +34,25 @@ export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
       })
     );
   },
+  removeaAsteroids: (ids) => {
+    // ДОРАБОТАТЬ
+    set((state) => ({
+      ...state,
+      renderedAsteroids: state.renderedAsteroids?.filter(
+        (asteroid: AsteroidInfo) => !ids.includes(asteroid.id)
+      ),
+    }));
+  },
 }));
 
 export const useDistanceUnitStore = create<DistanceUnitStoreType>((set) => ({
   inKilometers: true,
-  switchInKilometers: () => set(
-    produce((state) => {
-      state.inKilometers = !state.inKilometers;
-    })
-  ),
+  switchInKilometers: () =>
+    set(
+      produce((state) => {
+        state.inKilometers = !state.inKilometers;
+      })
+    ),
 }));
 
 export const useCartStore = create<CartStoreType>((set) => ({
@@ -57,6 +67,12 @@ export const useCartStore = create<CartStoreType>((set) => ({
     set(
       produce((state) => {
         state.cart.delete(id);
+      })
+    ),
+  clearCart: () =>
+    set(
+      produce((state) => {
+        state.cart.clear();
       })
     ),
 }));

@@ -6,10 +6,21 @@ import styles from "./AsteroidsList.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect } from "react";
 
-export function AsteroidsList ({notRenderedAstroids}: {notRenderedAstroids: AsteroidInfo[]}) {
-  const { renderedAsteroids, notRenderedAsteroids, setAsteroidsList, getMoreAsteroids } = useAsteroidsListStore();
+export function AsteroidsList({
+  notRenderedAstroids,
+}: {
+  notRenderedAstroids: AsteroidInfo[];
+}) {
+  const {
+    renderedAsteroids,
+    notRenderedAsteroids,
+    setAsteroidsList,
+    getMoreAsteroids,
+  } = useAsteroidsListStore();
   useEffect(() => {
-    setAsteroidsList(notRenderedAstroids);
+    if (!renderedAsteroids) {
+      setAsteroidsList(notRenderedAstroids);
+    }
   }, []);
 
   return (
@@ -30,6 +41,6 @@ export function AsteroidsList ({notRenderedAstroids}: {notRenderedAstroids: Aste
       </InfiniteScroll>
     </div>
   );
-};
+}
 
 export default AsteroidsList;
