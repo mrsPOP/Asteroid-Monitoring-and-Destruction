@@ -3,7 +3,7 @@ interface AsteroidsListStoreType {
   notRenderedAsteroids: [] | undefined | AsteroidInfo[],
   setAsteroidsList: (data: AsteroidInfo[]) => void,
   getMoreAsteroids: () => void,
-  removeaAsteroids: (ids: string[]) => void,
+  removeAsteroids: (ids: string[]) => void,
 }
 
 interface DistanceUnitStoreType {
@@ -12,7 +12,7 @@ interface DistanceUnitStoreType {
 }
 
 interface CartKeysValuesType {
-  [key: string]: AsteroidInfo;
+  [key: string]: AsteroidInfo
 }
 
 interface CartStoreType {

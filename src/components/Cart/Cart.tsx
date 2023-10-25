@@ -9,11 +9,11 @@ import classNames from "classnames";
 
 const Cart = () => {
   const {cart, clearCart} = useCartStore();
-  const { removeaAsteroids } = useAsteroidsListStore();
+  const { removeAsteroids } = useAsteroidsListStore();
   const router = useRouter();
 
   function handleSend () {
-    removeaAsteroids(Array.from(cart.keys()));
+    removeAsteroids(Array.from(cart.keys()));
     router.push("/order-status");
     // clearCart();
   } 

@@ -34,7 +34,7 @@ export const useAsteroidsListStore = create<AsteroidsListStoreType>((set) => ({
       })
     );
   },
-  removeaAsteroids: (ids) => {
+  removeAsteroids: (ids) => {
     // ДОРАБОТАТЬ
     set((state) => ({
       ...state,
