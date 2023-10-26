@@ -8,14 +8,13 @@ import { useRouter } from "next/navigation";
 import classNames from "classnames";
 
 const Cart = () => {
-  const {cart, clearCart} = useCartStore();
-  const { removeAsteroids } = useAsteroidsListStore();
+  const cart = useCartStore((state) => state.cart);
+  const removeAsteroids = useAsteroidsListStore(state => state.removeAsteroids);
   const router = useRouter();
 
   function handleSend () {
     removeAsteroids(Array.from(cart.keys()));
     router.push("/order-status");
-    // clearCart();
   } 
 
   return (
