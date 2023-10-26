@@ -3,7 +3,7 @@ import AsteroidsList from "@/components/AsteroidsList/AsteroidsList";
 import DistanceUnit from "@/components/DistanceUnit/DistanceUnit";
 import PageTitle from "@/components/PageTitle/PageTitle";
 import Cart from "@/components/Cart/Cart";
-import RenderedAsteroids from "@/components/RenderedAsteroids/RenderedAsteroids";
+import StaticAsteroids from "@/components/StaticAsteroids/StaticAsteroids";
 import { getAsteroidsList } from "@/utils/helperFunctions";
 
 export default async function Home() {
@@ -23,7 +23,7 @@ export default async function Home() {
     <main className={styles.main}>
       <PageTitle />
       <DistanceUnit />
-      <RenderedAsteroids firstStaticAsteroidsData={firstStaticAsteroidsData}/>
+      <StaticAsteroids firstStaticAsteroidsData={firstStaticAsteroidsData}/>
       <AsteroidsList notRenderedAstroids={notRenderedAstroids}/>
       <Cart />
     </main>

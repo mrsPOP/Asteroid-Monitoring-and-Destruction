@@ -1,7 +1,7 @@
 import AsteroidItem from "../AsteroidItem/AsteroidItem";
-import styles from "./RenderedAsteroids.module.css"
+import styles from "./StaticAsteroids.module.css"
 
-const RenderedAsteroids = async ({firstStaticAsteroidsData}: {firstStaticAsteroidsData: AsteroidInfo[]}) => {
+const StaticAsteroids = ({firstStaticAsteroidsData}: {firstStaticAsteroidsData: AsteroidInfo[]}) => {
 
   return (
     <ul className={styles.list}>
@@ -12,4 +12,4 @@ const RenderedAsteroids = async ({firstStaticAsteroidsData}: {firstStaticAsteroi
   );
 };
 
-export default RenderedAsteroids;
+export default StaticAsteroids;
